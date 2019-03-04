@@ -1,0 +1,7 @@
+A=imread('Image A.jpg');
+B=imread('Image B.jpg');
+cpselect(A,B);
+tform=cp2tform(fixedPoints,movingPoints,'affine');
+C=imtransform(B,tform);
+imshow(C)
+H=fixedPoints*movingPoints'
